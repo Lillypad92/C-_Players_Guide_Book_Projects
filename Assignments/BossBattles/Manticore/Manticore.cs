@@ -1,4 +1,4 @@
-﻿namespace The_C__player_s_guide.Assignments.Manticore
+﻿namespace The_C__player_s_guide.Assignments.BossBattles.Manticore
 {
     public class Manticore
     {
@@ -18,7 +18,7 @@
                 {
                     return number;
                 }
-                
+
                 Console.Write("You have not written a number, try again! ");
             }
         }
@@ -52,8 +52,8 @@
             Console.WriteLine("Player 2, it is your turn.");
             while (true)
             {
-                if(ShouldEndGame(cityHealth, manticoreHealth)) { break; }
-     
+                if (ShouldEndGame(cityHealth, manticoreHealth)) { break; }
+
                 Console.WriteLine("-----------------------------------------------------------------");
                 Console.WriteLine($"STATUS: Round: {roundNumber++} City: {cityHealth} / 15  Manticore: {manticoreHealth} / 10.");
 
@@ -77,13 +77,13 @@
                 }
                 else if (cannonRange > manticoreDistance)
                 {
-                    
+
                     Console.WriteLine("That round OVERSHOT the target. ");
                     Console.WriteLine();
                 }
                 if (manticoreHealth > 0)
                 {
-                    cityHealth--;  
+                    cityHealth--;
                 }
             }
         }
@@ -120,7 +120,8 @@
                 Console.ForegroundColor = ConsoleColor.Red;
                 return 3;
             }
-            if (roundNumber % 5 == 0) {
+            if (roundNumber % 5 == 0)
+            {
                 Console.ForegroundColor = ConsoleColor.Blue;
                 return 3;
             }
