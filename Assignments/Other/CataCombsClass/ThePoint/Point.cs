@@ -1,16 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace The_C__player_s_guide.Assignments.Other.CataCombsClass.ThePoint
+﻿namespace The_C__player_s_guide.Assignments.Other.CataCombsClass.ThePoint
 {
-    internal class Point
+    public class Point
     {
-        public void RunPoint()
+        public float X { get; set; }
+        public float Y { get; set; }
+        public Point(float x, float y)
+        {
+            X = x;
+            Y = y;
+        }
+        public Point() 
+        { 
+            X = 0; 
+            Y = 0;
+
+        }
+        public void DisplayPoint(Point p) 
         {
 
+            Console.WriteLine($"({p.X}, {p.Y})");
+        }
+        public void RunPoint()
+        {
+            DisplayPoint(new Point(2, 3));
+            DisplayPoint(new Point(-4, 0));
         }
 
     }
