@@ -1,6 +1,7 @@
 ﻿using The_C__player_s_guide.Assignments.BossBattles.Manticore;
 using The_C__player_s_guide.Assignments.Other.CataCombsClass.TheCard;
 using The_C__player_s_guide.Assignments.Other.CataCombsClass.TheColor;
+using The_C__player_s_guide.Assignments.Other.CataCombsClass.TheLockedDoor;
 using The_C__player_s_guide.Assignments.Other.CataCombsClass.ThePoint;
 
 //new Manticore().Run();
@@ -17,5 +18,8 @@ using The_C__player_s_guide.Assignments.Other.CataCombsClass.ThePoint;
 
 //new TheColor().Run();
 
-new TheCard().Run();
+//new TheCard().Run();
+
+TheLockedDoor.Run();
+
 
