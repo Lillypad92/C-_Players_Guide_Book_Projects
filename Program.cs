@@ -2,7 +2,9 @@
 using The_C__player_s_guide.Assignments.Other.CataCombsClass.TheCard;
 using The_C__player_s_guide.Assignments.Other.CataCombsClass.TheColor;
 using The_C__player_s_guide.Assignments.Other.CataCombsClass.TheLockedDoor;
+using The_C__player_s_guide.Assignments.Other.CataCombsClass.ThePassword;
 using The_C__player_s_guide.Assignments.Other.CataCombsClass.ThePoint;
+
 
 //new Manticore().Run();
 
@@ -20,6 +22,8 @@ using The_C__player_s_guide.Assignments.Other.CataCombsClass.ThePoint;
 
 //new TheCard().Run();
 
-TheLockedDoor.Run();
+//TheLockedDoor.Run();
+
+ThePasswordValidator.Run();
 
 
