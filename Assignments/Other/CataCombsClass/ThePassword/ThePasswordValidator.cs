@@ -3,9 +3,9 @@ using System.Xml;
 
 namespace The_C__player_s_guide.Assignments.Other.CataCombsClass.ThePassword
 {
-    public static class ThePasswordValidator
+    public class ThePasswordValidator
     {
-        public static void Run()
+        public void Run()
         {
             Console.WriteLine("Create a password");
             Console.WriteLine("Password must be between 6 and 13 letters long, and contain one uppercase letter, one lowercase letter and one number.");
@@ -28,7 +28,7 @@ namespace The_C__player_s_guide.Assignments.Other.CataCombsClass.ThePassword
                 }
             }
         }
-        private static bool IsValid(string password)
+        private bool IsValid(string password)
         {
             if (string.IsNullOrEmpty(password)) return false;
             if (password.Length < 6 || password.Length > 13) return false;
