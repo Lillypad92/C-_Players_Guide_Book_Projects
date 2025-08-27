@@ -26,10 +26,29 @@
             Console.WriteLine();
 
             CreatePlayer();
-
+            
             Console.WriteLine($"Number of players: {players.Count}");
 
-            PlayRound();
+            // To print the result of the round
+            while (true) 
+            {
+                string result = PlayRound();
+                Console.WriteLine(result);
+
+                string mostWins = result.Contains("wins") ? result.Split(" ")[0] : "No one";
+                Console.WriteLine($"{mostWins} has the most wins so far!");
+
+                Console.Write("Play another round? Yes(Y) or No(N): ");
+                string playAnotherRound = Console.ReadLine()?.ToUpper();
+                if (playAnotherRound != "Y") 
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("The game has ended.");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+                }
+            }
+            
         }
         public void CreatePlayer()
         {
@@ -56,15 +75,16 @@
         }
         public string PlayRound() 
         {
-            // Fix the method so the game continues and show a result for each round. 
-            
-                Console.WriteLine("Starting the first round...");
+            Console.WriteLine("Starting the round...");
+             
+            {
                 string[] playerChoice = new string[players.Count];
 
                 for (int i = 0; i < players.Count; i++)
                 {
                     Console.Write($"{players[i].Name}, choose Rock(R), Scissors(S) or Paper(P): ");
                     playerChoice[i] = Console.ReadLine()?.ToUpper();
+                    Console.Clear();
                     Console.Write($"{players[i].Name} has choosen.");
                     Console.WriteLine();
                 }
@@ -73,14 +93,11 @@
 
                 if (p1 == p2) return "It is a draw!";
 
-                if ((p1 == "R" && p2 == "S") || (p1 == "S" && p2 == "P") || (p1 == "P" && p2 == "R"))
-                    return $"{players[0].Name} wins!";
-                else if ((p2 == "R" && p1 == "S") || (p2 == "S" && p1 == "P") || (p2 == "P" && p1 == "R"))
-                    return $"{players[1].Name} wins!";
-                else
-                    return "Invalid input. Please use R, P, or S.";
-    
-        }
+                if ((p1 == "R" && p2 == "S") || (p1 == "S" && p2 == "P") || (p1 == "P" && p2 == "R")) return $"{players[0].Name} wins!";
+                else if ((p2 == "R" && p1 == "S") || (p2 == "S" && p1 == "P") || (p2 == "P" && p1 == "R")) return $"{players[1].Name} wins!";
+                else return "Invalid input. Please use R, P, or S.";
+            }
+        }    
     }
 
 public class Player

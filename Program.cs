@@ -1,4 +1,5 @@
 ﻿using The_C__player_s_guide.Assignments.BossBattles.Manticore;
+using The_C__player_s_guide.Assignments.Other.CataCombsClass.Hangman;
 using The_C__player_s_guide.Assignments.Other.CataCombsClass.RockPaperScissors;
 using The_C__player_s_guide.Assignments.Other.CataCombsClass.TheCard;
 using The_C__player_s_guide.Assignments.Other.CataCombsClass.TheColor;
@@ -27,6 +28,8 @@ using The_C__player_s_guide.Assignments.Other.CataCombsClass.ThePoint;
 
 //ThePasswordValidator.Run();
 
-new RockPaperScissors().Run();
+//new RockPaperScissors().Run();
+
+new Hangman().Run();
 
 
